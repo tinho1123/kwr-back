@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services;
+
 use App\Services\BaseServices;
 use App\Models\User;
 

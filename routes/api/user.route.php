@@ -13,7 +13,10 @@ use App\Http\Controllers\UserController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::prefix('user')->group(base_path('routes/api/user.route.php'));
-Route::prefix('product')->group(base_path('routes/api/product.route.php'));
 
-
+Route::controller(UserController::class)->group(function() {
+    Route::get('', 'get');
+    Route::post('', 'create');
+    Route::put('{id}','update');
+    Route::delete('{id}','delete');
+});
