@@ -14,7 +14,7 @@ class UserController extends Controller
 {
     public function create(UserRequest $request) {
        $request->validated();
-       return 'oi';
+
     }
 
     public function get(Request $request) {
